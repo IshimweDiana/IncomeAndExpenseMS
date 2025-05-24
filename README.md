@@ -56,11 +56,13 @@ Many individuals and businesses struggle with financial management due to ineffi
 **Report Generator:** Compiles summaries and trend graphs.
 **Holidays:** Purpose: Restrict updates on specific dates (auditing logic).
 ![Business Process Diagram](BusinessProcess.drawio.png)
+
 [Phase 2 Documentation](Phase2.pdf)
 
 ### 3️⃣ Phase 3: Logical Model Design
-[ER Diagram](er-diagram.jpg)
-[Phase 3 Documentation](phase3-docs.pdf)
+![ER Diagram](ERdiagram.jpg)
+
+[Phase 3 Documentation](phase3.pdf)
 
 **Database Entities:**
 1. **Users**
@@ -81,10 +83,11 @@ Many individuals and businesses struggle with financial management due to ineffi
 **Deliverables:**
 
 -Database named Tues_25408_Diane_ExpenseIncome_DB.
--Set up Oracle Enterprise Manager (OEM) for monitoring.
+![Plugable Database](phase4.1.PNG)
 -Granted super admin privileges to the user.
+![Grant creation](phase4.5.PNG)
 -All project data and activities are stored in this PDB.
-![OEM Setup](oem-screenshot.png)
+
 
 ### 5️⃣ Phase 5: Table Implementation
 **Objective:** Implemented the logical design by creating tables and inserting realistic data.
@@ -92,9 +95,10 @@ Many individuals and businesses struggle with financial management due to ineffi
 **Deliverables:**
 
 -Created tables: **Users**, **Categories**, **Transactions**, **Budgets**, **Reports**, **Holidays**.
+![Table creation](phase5.1.PNG)
 
 -Inserted sample data for testing and demonstration.
-![Data Verification](data-verification.png)
+![Index created](phase5.3.PNG)
 
 **Sample Table Creation:**
 ```sql
@@ -108,12 +112,24 @@ CREATE TABLE Users (
     CONSTRAINT pk_users PRIMARY KEY (user_id)
 );
 ```
+-Test for total income and expenses
+![Total income and expenses](phase5.5.PNG)
+
+-Test for budget amount, actual spent
+![Budget amount and actual amount](phase5.6.PNG)
+
+-Test the holiday
+![Holiday](phase5.7.PNG)
 
 ### 6️⃣ Phase 6: Database Operations
 ### Objective
 Enable effective database operations with modular programming.
 ### Database Operations
 Performed DML (INSERT, UPDATE, DELETE) and DDL (ALTER) operations.
+![DDL Operation](phase6.2.PNG)
+
+![DML Operation](phase6.3.PNG)
+
 ### Task Requirements
 
 #### Simple Problem Statement
@@ -122,13 +138,20 @@ Analyzed income trends using window functions to calculate running totals for fi
 #### Procedures and Functions
 - Created `get_user_transactions` procedure with cursors and exception handling to fetch user transactions.
 - Created `get_total_income` function to compute total income for a user.
+![wndow function](phase6.5.PNG)
 
+![Function](phase6.9.PNG)
 #### Testing
-Validated operations via SQL queries and procedure calls (e.g., tested for `diane_admin` and invalid user IDs).
+Validated operations via SQL queries and procedure calls (e.g., tested for `user ID` and invalid user IDs).
+![Procedure get user transction](phase6.8.PNG)
+
+![Invalid ID](phase6.10.PNG)
 
 #### Packages
 Organized procedures and functions in `income_expense_pkg` for modularity.
-![Procedure Test](procedure-test.png)  
+![Package Test](phase6.12.PNG)  
+
+![Package Test](phase6.12.1.PNG) 
 ### 7️⃣ Phase 7: Advanced Database Programming and Auditing
 
 ### Objective
