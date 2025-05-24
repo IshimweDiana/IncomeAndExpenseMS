@@ -106,6 +106,8 @@ CREATE TABLE Users (
     created_at DATE DEFAULT SYSDATE,
     CONSTRAINT pk_users PRIMARY KEY (user_id)
 );
+```
+
 ### 6️⃣ Phase 6: Database Operations
 ### Objective
 Enable effective database operations with modular programming.
@@ -204,6 +206,7 @@ BEGIN
             'Table manipulations not allowed on holidays');
     END IF;
 END;
+```
 ![Audit Logs](audit-logs.png)  
 - Implemented security triggers
 - Created audit logging system
