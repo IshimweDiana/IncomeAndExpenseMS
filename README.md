@@ -27,8 +27,7 @@ Many individuals and businesses struggle with financial management due to ineffi
 ## 📊 Project Phases Documentation
 
 ### 1️⃣ Phase 1: Problem Statement
-[View Phase 1 Presentation](Tues_25408_Diane_PLSQL.pptx
-)
+[View Phase 1 Presentation](Tues_25408_Diane_PLSQL.pptx)
 
 - Identified financial tracking challenges
 - Defined project scope and objectives
@@ -83,9 +82,13 @@ Many individuals and businesses struggle with financial management due to ineffi
 **Deliverables:**
 
 -Database named Tues_25408_Diane_ExpenseIncome_DB.
+
 ![Plugable Database](phase4.1.PNG)
+
 -Granted super admin privileges to the user.
+
 ![Grant creation](phase4.5.PNG)
+
 -All project data and activities are stored in this PDB.
 
 
@@ -95,10 +98,13 @@ Many individuals and businesses struggle with financial management due to ineffi
 **Deliverables:**
 
 -Created tables: **Users**, **Categories**, **Transactions**, **Budgets**, **Reports**, **Holidays**.
+
 ![Table creation](phase5.1.PNG)
 
 -Inserted sample data for testing and demonstration.
+
 ![Index created](phase5.3.PNG)
+
 
 **Sample Table Creation:**
 ```sql
@@ -113,22 +119,28 @@ CREATE TABLE Users (
 );
 ```
 -Test for total income and expenses
+
 ![Total income and expenses](phase5.5.PNG)
 
 -Test for budget amount, actual spent
+
 ![Budget amount and actual amount](phase5.6.PNG)
 
 -Test the holiday
+
 ![Holiday](phase5.7.PNG)
+
 
 ### 6️⃣ Phase 6: Database Operations
 ### Objective
 Enable effective database operations with modular programming.
 ### Database Operations
 Performed DML (INSERT, UPDATE, DELETE) and DDL (ALTER) operations.
+
 ![DDL Operation](phase6.2.PNG)
 
 ![DML Operation](phase6.3.PNG)
+
 
 ### Task Requirements
 
@@ -138,20 +150,31 @@ Analyzed income trends using window functions to calculate running totals for fi
 #### Procedures and Functions
 - Created `get_user_transactions` procedure with cursors and exception handling to fetch user transactions.
 - Created `get_total_income` function to compute total income for a user.
+- 
 ![wndow function](phase6.5.PNG)
 
+
 ![Function](phase6.9.PNG)
+
+
 #### Testing
 Validated operations via SQL queries and procedure calls (e.g., tested for `user ID` and invalid user IDs).
+
 ![Procedure get user transction](phase6.8.PNG)
+
 
 ![Invalid ID](phase6.10.PNG)
 
+
 #### Packages
 Organized procedures and functions in `income_expense_pkg` for modularity.
+
 ![Package Test](phase6.12.PNG)  
 
+
 ![Package Test](phase6.12.1.PNG) 
+
+
 ### 7️⃣ Phase 7: Advanced Database Programming and Auditing
 
 ### Objective
@@ -172,6 +195,7 @@ Enhances security by controlling access and provides traceability of user action
 
 #### Trigger Implementation
 - **Simple Trigger**: `restrict_transactions` checks the current day and holidays, raising errors if conditions are violated.
+  
 - **Compound Trigger**: `compound_restrictions` for complex operations across multiple rows, ensuring consistency.
 - Used `Holidays` table to store and check holiday dates (e.g., National Heroes Day on June 1, 2025).
 
@@ -231,7 +255,30 @@ BEGIN
     END IF;
 END;
 ```
-![Audit Logs](audit-logs.png)  
+- Test 1: Attempt an Insert on a Weekday (Simulate May 23, 2025, a Friday)
+
+   ![Test](phase7.7.PNG)
+
+   ![Test](phase7.8.PNG)
+
+  
+- Test 2: Attempt an Insert on a Holiday (Simulate June 1, 2025)
+  
+   ![Test](phase7.9.PNG)
+
+  
+   ![Test](phase7.10.PNG)
+
+  
+- Test 3: Attempt an Insert on a Weekend (Today is Saturday, May 24, 2025)
+
+  
+   ![Test](phase7.11.PNG)
+
+  
+   ![Test](phase7.12.PNG)
+
+  
 - Implemented security triggers
 - Created audit logging system
 - Added transaction restrictions
