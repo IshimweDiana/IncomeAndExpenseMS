@@ -27,7 +27,8 @@ Many individuals and businesses struggle with financial management due to ineffi
 ## 📊 Project Phases Documentation
 
 ### 1️⃣ Phase 1: Problem Statement
-[View Phase 1 Presentation](phase1-presentation.pptx)
+[View Phase 1 Presentation](Tues_25408_Diane_PLSQL.pptx
+)
 
 - Identified financial tracking challenges
 - Defined project scope and objectives
