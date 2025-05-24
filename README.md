@@ -90,7 +90,9 @@ Many individuals and businesses struggle with financial management due to ineffi
 ![Grant creation](phase4.5.PNG)
 
 -All project data and activities are stored in this PDB.
+-my script
 
+![View script](Tues_25408_Diane_ExpenseIncome_DB_expense_admin.sql)
 
 ### 5️⃣ Phase 5: Table Implementation
 **Objective:** Implemented the logical design by creating tables and inserting realistic data.
