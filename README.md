@@ -55,8 +55,8 @@ Many individuals and businesses struggle with financial management due to ineffi
 
 **Report Generator:** Compiles summaries and trend graphs.
 **Holidays:** Purpose: Restrict updates on specific dates (auditing logic).
-![Business Process Diagram](BusinessProcess.drawio)
-![Phase 2 Documentation](Phase2.pdf)
+![Business Process Diagram](BusinessProcess.drawio.png)
+[Phase 2 Documentation](Phase2.pdf)
 
 ### 3️⃣ Phase 3: Logical Model Design
 [ER Diagram](er-diagram.jpg)
